@@ -11,7 +11,7 @@ PS: Rates updated every day at 15.31.
 Can be installed as a [NuGet package](https://www.nuget.org/packages/TcmbSharp). In the package manager console, enter the following:
 
 ```text
-Install-Package TcmbSharp -Version 1.0.0
+Install-Package TcmbSharp -Version 1.0.1
 ```
 
 ## Usage
