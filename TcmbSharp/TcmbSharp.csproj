@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Aybars Arslan</Authors>
+    <Description>Currency exchange rate to Turkish Lira (TL) using the Central Bank of the Republic of Turkey (TCMB) daily xml
+
+xml resource : http://www.tcmb.gov.tr/kurlar/today.xml</Description>
+    <PackageTags>Turkish Lira, TL, Currency, Exchange Rate, Tcmb</PackageTags>
+    <Company>AybarSoft</Company>
+    <PackageProjectUrl>https://github.com/arslanaybars/TcmbSharp</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/arslanaybars/TcmbSharp</PackageLicenseUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Runtime.Caching" Version="4.5.0" />
+  </ItemGroup>
+
+</Project>
