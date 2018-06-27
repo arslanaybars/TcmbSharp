@@ -22,7 +22,7 @@ namespace TcmbSharp
         private static readonly ObjectCache Cache = MemoryCache.Default;
         private const string CacheKey = "currencyList";
 
-        public static decimal GetRate(string currencyCode)
+        public static decimal Rate(string currencyCode)
         {
             // Loading from a file, you can also load from a stream
             var currency = CurrencyList.FirstOrDefault(x => x.Code == currencyCode);

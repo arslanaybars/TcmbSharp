@@ -1,5 +1,6 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TcmbSharp;
 
 namespace TcmbSharp.Tests
 {
@@ -12,7 +13,7 @@ namespace TcmbSharp.Tests
             // Arrange
 
             // Act
-            var rate = Tcmb.GetRate("USD");
+            var rate = Tcmb.Rate("USD"); 
 
             // Assest
             Assert.AreNotEqual(rate, null);
@@ -24,31 +25,31 @@ namespace TcmbSharp.Tests
         public void Invalid_Currency_Code_Should_Throw()
         {
             // Act
-            Tcmb.GetRate("ASD");
+            Tcmb.Rate("ASD");
         }
 
         [TestMethod]
         public void Valid_Currency_Codes_Should_Returns_Value()
         {
             // Assest
-            Assert.AreNotEqual(Tcmb.GetRate("USD"), null);
-            Assert.AreNotEqual(Tcmb.GetRate("AUD"), null);
-            Assert.AreNotEqual(Tcmb.GetRate("DKK"), null);
-            Assert.AreNotEqual(Tcmb.GetRate("EUR"), null);
-            Assert.AreNotEqual(Tcmb.GetRate("GBP"), null);
-            Assert.AreNotEqual(Tcmb.GetRate("CHF"), null);
-            Assert.AreNotEqual(Tcmb.GetRate("SEK"), null);
-            Assert.AreNotEqual(Tcmb.GetRate("CAD"), null);
-            Assert.AreNotEqual(Tcmb.GetRate("KWD"), null);
-            Assert.AreNotEqual(Tcmb.GetRate("NOK"), null);
-            Assert.AreNotEqual(Tcmb.GetRate("SAR"), null);
-            Assert.AreNotEqual(Tcmb.GetRate("JPY"), null);
-            Assert.AreNotEqual(Tcmb.GetRate("BGN"), null);
-            Assert.AreNotEqual(Tcmb.GetRate("RON"), null);
-            Assert.AreNotEqual(Tcmb.GetRate("RUB"), null);
-            Assert.AreNotEqual(Tcmb.GetRate("IRR"), null);
-            Assert.AreNotEqual(Tcmb.GetRate("CNY"), null);
-            Assert.AreNotEqual(Tcmb.GetRate("PKR"), null);
+            Assert.AreNotEqual(Tcmb.Rate("USD"), null);
+            Assert.AreNotEqual(Tcmb.Rate("AUD"), null);
+            Assert.AreNotEqual(Tcmb.Rate("DKK"), null);
+            Assert.AreNotEqual(Tcmb.Rate("EUR"), null);
+            Assert.AreNotEqual(Tcmb.Rate("GBP"), null);
+            Assert.AreNotEqual(Tcmb.Rate("CHF"), null);
+            Assert.AreNotEqual(Tcmb.Rate("SEK"), null);
+            Assert.AreNotEqual(Tcmb.Rate("CAD"), null);
+            Assert.AreNotEqual(Tcmb.Rate("KWD"), null);
+            Assert.AreNotEqual(Tcmb.Rate("NOK"), null);
+            Assert.AreNotEqual(Tcmb.Rate("SAR"), null);
+            Assert.AreNotEqual(Tcmb.Rate("JPY"), null);
+            Assert.AreNotEqual(Tcmb.Rate("BGN"), null);
+            Assert.AreNotEqual(Tcmb.Rate("RON"), null);
+            Assert.AreNotEqual(Tcmb.Rate("RUB"), null);
+            Assert.AreNotEqual(Tcmb.Rate("IRR"), null);
+            Assert.AreNotEqual(Tcmb.Rate("CNY"), null);
+            Assert.AreNotEqual(Tcmb.Rate("PKR"), null);
         }
     }
 }

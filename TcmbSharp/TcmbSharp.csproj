@@ -6,7 +6,7 @@
     <Description>Currency exchange rate to Turkish Lira (TL) using the Central Bank of the Republic of Turkey (TCMB) daily xml
 
 xml resource : http://www.tcmb.gov.tr/kurlar/today.xml</Description>
-    <PackageTags>Turkish Lira, TL, Currency, Exchange Rate, Tcmb</PackageTags>
+    <PackageTags>Turkish Lira, TL, Currency, Exchange Rate, Tcmb, Kur, Euro, Usd</PackageTags>
     <Company>AybarSoft</Company>
     <PackageProjectUrl>https://github.com/arslanaybars/TcmbSharp</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/arslanaybars/TcmbSharp</PackageLicenseUrl>
