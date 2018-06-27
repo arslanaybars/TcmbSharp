@@ -1,6 +1,6 @@
 # TcmbSharp
 
-[![FixerSharp Nuget](https://img.shields.io/nuget/v/FixerSharp.svg?style=flat)](https://www.nuget.org/packages/TcmbSharp)
+[![TcmbSharp Nuget](https://img.shields.io/nuget/v/TcmbSharp.svg?style=flat)](https://www.nuget.org/packages/TcmbSharp)
 
 Currency exchange rate to Turkish Lira (TL) using the Central Bank of the Republic of Turkey (TCMB) daily xml. 
 
