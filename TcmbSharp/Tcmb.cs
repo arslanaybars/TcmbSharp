@@ -33,9 +33,12 @@ namespace TcmbSharp
             }
 
             // If It's not cross rate operation. we return currency rate
-            if (!currency.IsCrossRate) return Convert.ToDecimal(currency.Rate);
+            if (!currency.IsCrossRate)
+            {
+                return decimal.Parse(currency.Rate, CultureInfo.InvariantCulture);
+            }
 
-            var usdCurrency = Convert.ToDecimal(CurrencyList.FirstOrDefault(x => x.Code == "USD")?.Rate);
+            var usdCurrency = decimal.Parse(CurrencyList.First(x => x.Code == "USD").Rate, CultureInfo.InvariantCulture);
             var currencyUsdWeight = 1 / Convert.ToDecimal(currency.CrossRateUsd);
             return currencyUsdWeight * usdCurrency;
         }
@@ -53,10 +56,10 @@ namespace TcmbSharp
 
             Doc.LoadXml(_xmlStr);
 
-            var xmlcontents = Doc.InnerXml;
+            var xmlContent = Doc.InnerXml;
 
             var serializer = new XmlSerializer(typeof(CurrencyList), new XmlRootAttribute("Tarih_Date"));
-            using (var stringReader = new StringReader(xmlcontents))
+            using (var stringReader = new StringReader(xmlContent))
             using (var reader = XmlReader.Create(stringReader))
             {
                 var result = (CurrencyList)serializer.Deserialize(reader);
@@ -85,7 +88,7 @@ namespace TcmbSharp
             {
                 return (T)Cache[key];
             }
-            catch (Exception)
+            catch
             {
                 return null;
             }
